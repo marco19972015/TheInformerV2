@@ -1,0 +1,106 @@
+<div class="container mx-auto px-4 mt-10">
+    <div class="flex flex-col lg:grid gap-5 lg:grid-cols-12">
+        <!-- image div -->
+        <div class="px-14 py-24 space-y-8 md:space-y-10 shadow-md md:col-span-7">
+            <div>
+                <h1 class="text-5xl py-6">Contact US</h1>
+                <p class="text-lg">We want to hear what you have to say and any ideas to make this website as helpful as it can be. Please leave your name, email, and a message 
+                    and we will get back to you as soon as possible. 
+                </p>
+            </div>
+            
+            <div class="flex flex-col space-y-7">
+
+                <div class="inline-flex space-x-2">
+                    <span class="material-icons">
+                        call
+                    </span>         
+                    <span>
+                        (347) 897 8250
+                    </span>
+                </div>
+          
+                <div class="inline-flex space-x-2">
+                    <span class="material-icons">
+                        email
+                        </span>                            
+                    <span>
+                        Marcoantonio.torres@icloud.com
+                    </span>
+                </div>
+          
+                <div class="inline-flex space-x-2">
+                    <span class="material-icons">
+                        location_on
+                        </span>      
+                    <span>
+                        2190 Unionport Rd
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="space-x-4 ">
+                <span class="material-icons">account_circle</span>
+                <span class="material-icons">account_circle</span>
+                <span class="material-icons">account_circle</span>
+                <span class="material-icons">account_circle</span>
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="flex flex-col justify-center items-center px-12 py-14 shadow-md  sm:col-span-5">
+
+            
+                <!-- we use the formGroup and pass the name myfrom -->
+                <form [formGroup]="myform" (ngSubmit)="onSubmit()"  class="fles flex-col space-y-4">
+                    <div>
+                        <label 
+                        for="username"
+                        class="text-sm">Your name</label>
+                        <input 
+                        formControlName="username"
+                        type="text" 
+                        placeholder="Your name" 
+                        class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-black">                        
+                    </div>
+
+                    <div>
+                        <label 
+                        for="emailAddress" 
+                        class="text-sm">Email Address</label>
+                        <input 
+                        formControlName="emailAddress"
+                        type="email" 
+                        placeholder="Email Address" 
+                        class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-black">
+                    </div>
+
+                    <div>
+                        <label 
+                        for="message"
+                        class="text-sm">Message</label>
+                        <textarea 
+                        formControlName="message"
+                        cols="30" 
+                        rows="10"
+                        placeholder="Message" 
+                        class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 
+                        outline-none focus:ring-2 focus:ring-black"
+                        ></textarea>
+                    </div>
+
+                    <button class="inline-block bg-slate-400 self-end font-bold px-6 py-2 rounded-lg uppercase">
+                        Send Message
+                    </button>                    
+                    
+                </form>
+
+
+                
+        </div>
+    </div>
+
+</div>
+
+
