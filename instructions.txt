@@ -1,7 +1,7 @@
 
 
 This is a file created in vs Code!!! wow more changes and conflict!! making a change in local side haha
-
+okay now I'm actually creating a merge conflict by adding text on this line on the local side
 
 
 
