@@ -1,1 +1,18 @@
-<p>log-in works!</p>
+<h1>Login Form</h1>
+<form (ngSubmit)="login()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="formData.username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="formData.password" required>
+  </div>
+  <button type="submit">Login</button>
+</form>
+<div id="stored-info">
+  <h2>Stored Information</h2>
+  <p>Username: {{ storedUsername }}</p>
+  <p>Password: {{ storedPassword }}</p>
+</div>
+<button (click)="logout()">Logout</button>
