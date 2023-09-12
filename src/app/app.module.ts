@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular Material 
 import { MatIconModule } from '@angular/material/icon';
+import { LogInComponent } from './pages/log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatIconModule } from '@angular/material/icon';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    LogInComponent
   ],
   imports: [
     BrowserModule,
