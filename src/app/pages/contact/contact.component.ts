@@ -29,14 +29,13 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    localStorage.setItem("formdata", JSON.stringify(this.myform.value));
+    sessionStorage.setItem("formdata", JSON.stringify(this.myform.value));
+    localStorage.setItem("formdata", JSON.stringify(this.myform.value.message));
+    console.log(this.myform.value.username);  
+    // console.log(this.myform.value.emailAddress);  
+    // console.log(this.myform.value.message);    
+      
   }
-
-  
-
-
-
-
   
 
 }

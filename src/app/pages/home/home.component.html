@@ -1,5 +1,5 @@
-<div id="home" class="container mx-auto px-4  ">
-    <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
+<main id="home" class="container mx-auto px-4 ">
+    <aside class="grid grid-cols-1 gap-5 lg:grid-cols-3">
         <!-- image div -->
         <div class="flex text-center px-12 py-14 shadow-md md:col-span-2">
             <img src="./assets/img/hands.jpg" alt="" class=""> 
@@ -7,26 +7,25 @@
         
         <!-- Link div -->
         <div class="flex flex-col justify-center items-center text-center px-12 py-14 shadow-md ">
-            <a (click)="scrollToSection('legal-advice')" class="cursor-pointer font-bold">LEGAL SERVICE SECTION CLICK FOR MORE INFORMATION</a>
+            <h1><a (click)="scrollToSection('legal-advice')" class="cursor-pointer font-bold">LEGAL SERVICE SECTION CLICK FOR MORE INFORMATION</a></h1>
+
             <ul>
                 <li>
-                    <h1 class="text-indigo-500">Make The Road New York</h1>
+                    <h3 class="text-indigo-500">Make The Road New York</h3>
                 </li>
                 <li>
-                    <h1 class="text-indigo-500">Catholic Migration Services</h1>
+                    <h3 class="text-indigo-500">Catholic Migration Services</h3>
                 </li>
                 <li>
-                    <h1 class="text-indigo-500">National Immigrant Justice Center</h1>
+                    <h3 class="text-indigo-500">National Immigrant Justice Center</h3>
                 </li>
                 <li>
-                    <h1 class="text-indigo-500">The Legal Aid Society</h1>
+                    <h3 class="text-indigo-500">The Legal Aid Society</h3>
                 </li>
   
             </ul>
 
-
-
-            <a (click)="scrollToSection('school')" class="cursor-pointer font-bold">SCHOOL SERVICE SECTION CLICK FOR MORE INFORMATION</a>
+            <h1><a (click)="scrollToSection('school')" class="cursor-pointer font-bold">SCHOOL SERVICE SECTION CLICK FOR MORE INFORMATION</a></h1>
             <ul>
                 <li>
                     <a href="">Link 1</a>
@@ -59,17 +58,17 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </aside>
 
 
     <!-- This starts the div for the next for links that users can use to 
         be directed to a certain source  -->
-    <div id="legal-advice" class="shadow-md container pb-1 pt-5 md:my-10 ">
+    <article id="legal-advice" class="shadow-md container pb-1 pt-5 md:my-10 ">
         <h1 class="text-center text-2xl font-bold">Legal Service Section</h1>
         <h1 (click)="scrollToSection('home')"  class="text-center font-bold cursor-pointer">Click for Home</h1>
 
 
-    <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+    <section class=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
      shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
         <div class="py-4 md:flex ">
             <div class="md:shrink-0">
@@ -77,15 +76,16 @@
             </div>
             <div class="p-8">
              <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Make The Road New York</div>
-             <a href="https://maketheroadny.org/" target="_blank" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">https://maketheroadny.org/</a>
-             <p class="mt-2 text-slate-500 ">Make the Road New York provides legal services and support for immigrant communities in New York. They offer assistance with immigration applications, workers' rights, and housing issues.</p>
+             <a id="companyLink" href="https://maketheroadny.org/" target="_blank" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">https://maketheroadny.org/</a>
+             <p id="companyDescription" class="mt-2 text-slate-500 ">Make the Road New York provides legal services and support for immigrant communities in New York. They offer assistance with immigration applications, workers' rights, and housing issues.</p>
             </div>
+            <input id="boxCheck" type="checkbox" (input)="onCheckedBox($event)">
         </div>
-    </div>
+    </section>
 
 
 
-    <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+    <section class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
     my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:mt-4 md:max-w-5xl md:mr-20 md:text-right ">
         <!-- in order for the order-last to work we need to turn div into grid after md breakpoint (flex)  -->
         <div class="grid-cols-2 md:flex">
@@ -101,13 +101,13 @@
              <p class="mt-2 text-slate-500"> Catholic Migration Services offers immigration legal services to low-income immigrants in Brooklyn and Queens. They assist with green card applications, DACA, and more.</p>
             </div>
         </div>
-    </div>
+    </section>
 
 
 
 
 
-    <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+    <section class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
     my-4 shadow-md  max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
         <div class="py-4 md:flex">
             <div class="md:shrink-0">
@@ -119,10 +119,10 @@
              <p class="mt-2 text-slate-500">NIJC provides legal services for immigrants and refugees across the United States, and they offer some resources in Spanish</p>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+    <section class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
     my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mr-20 md:text-right">
         <!-- in order for the order-last to work we need to turn div into grid after md breakpoint (flex)  -->
         <div class="grid-cols-2 md:flex">
@@ -138,8 +138,8 @@
              <p class="mt-2 text-slate-500">The Legal Aid Society in New York offers legal services to immigrants, including representation in immigration court and assistance with various immigration matters</p>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
+    </article>
 
 
 <!-- ------------------------------------------------------------------------------------------------------ -->
@@ -147,9 +147,9 @@
 
   <!-- This starts the div for the next for links that users can use to 
         be directed to a certain source  -->
-    <div id="school" class="shadow-md container md:my-10 pb-1  pt-5">
+    <article id="school" class="shadow-md container md:my-10 pb-1  pt-5">
         <h1 class="text-center text-2xl font-bold">School related things</h1>
-        <div class="shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4  md:ml-20">
+        <section class="shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4  md:ml-20">
             <div class="py-4 md:flex ">
                 <div class="md:shrink-0">
                     <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*" alt="">
@@ -160,10 +160,10 @@
                  <p class="mt-2 text-slate-500 ">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
+        </section>
     
     
-        <div class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:mr-20 md:text-right ">
+        <section class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:mr-20 md:text-right ">
             <!-- in order for the order-last to work we need to turn div into grid after md breakpoint (flex)  -->
             <div class="grid-cols-2 md:flex">
                 <!-- we use md:order-last so the goes on the right instead of on the left -->
@@ -178,9 +178,9 @@
                  <p class="mt-2 text-slate-500">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
+        </section>
     
-        <div class="my-4 shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
+        <section class="my-4 shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
             <div class="py-4 md:flex">
                 <div class="md:shrink-0">
                     <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*" alt="">
@@ -191,10 +191,10 @@
                  <p class="mt-2 text-slate-500">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
+        </section>
     
     
-        <div class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mr-20 md:text-right">
+        <section class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mr-20 md:text-right">
             <!-- in order for the order-last to work we need to turn div into grid after md breakpoint (flex)  -->
             <div class="grid-cols-2 md:flex">
                 <!-- we use md:order-last so the goes on the right instead of on the left -->
@@ -208,8 +208,8 @@
                  <p class="mt-2 text-slate-500">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </article>
     
 
 <!-- ------------------------------------------------------------------------------------------------------ -->
@@ -217,10 +217,10 @@
 
   <!-- This starts the div for the next for links that users can use to 
         be directed to a certain source  -->
-    <div id="activities" class="shadow-md container pb-1 pt-5 md:my-10 ">
+    <article id="activities" class=" shadow-md container pb-1 pt-5 md:my-10 ">
         <h1 class="text-center text-2xl font-bold">Activities in NYC</h1>
     
-        <div class="shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
+        <section class="shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
             <div class="py-4 md:flex ">
                 <div class="md:shrink-0">
                     <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*" alt="">
@@ -231,10 +231,10 @@
                  <p class="mt-2 text-slate-500 ">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
+        </section>
     
     
-        <div class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:mr-20 md:text-right">
+        <section class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:mr-20 md:text-right">
             <!-- in order for the order-last to work we need to turn div into grid after md breakpoint (flex)  -->
             <div class="grid-cols-2 md:flex">
                 <!-- we use md:order-last so the goes on the right instead of on the left -->
@@ -249,9 +249,9 @@
                  <p class="mt-2 text-slate-500">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
+        </section>
     
-        <div class="my-4 shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
+        <section class="my-4 shadow-md max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mt-4 md:ml-20">
             <div class="py-4 md:flex">
                 <div class="md:shrink-0">
                     <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*" alt="">
@@ -262,10 +262,10 @@
                  <p class="mt-2 text-slate-500">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
+        </section>
     
     
-        <div class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mr-20 md:text-right">
+        <section class="my-4 shadow-md py-4 max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-5xl md:mr-20 md:text-right">
             <!-- in order for the order-last to work we need to turn div into grid after md breakpoint (flex)  -->
             <div class="grid-cols-2 md:flex">
                 <!-- we use md:order-last so the goes on the right instead of on the left -->
@@ -280,9 +280,9 @@
                  <p class="mt-2 text-slate-500">Look at this cat looking like a cat. This is just text to occupy the space that is being taken up. I think I want more space</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </article>
     
-</div>
+</main>
 
 

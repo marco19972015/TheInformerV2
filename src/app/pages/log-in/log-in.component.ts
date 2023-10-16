@@ -18,6 +18,7 @@ export class LogInComponent implements OnInit{
 
   constructor() { }
 
+  // Create a lifecycle hook 
   ngOnInit(): void {
     // Check if the user is already logged in and display stored information
     const storedUsername = localStorage.getItem('username');
